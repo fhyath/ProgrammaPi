@@ -1,80 +1,97 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body {
-    background-image: url("bg.jpg");
-    background-repeat: repeat;
-    animation: animatedBackground 60s linear infinite;
+.bodySection {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./Assets/bg.jpg");
+  background-repeat: repeat;
+  animation: animatedBackground 60s linear infinite;
 }
-.gameTitle{
-    text-align: center;
-    font-family: 'Nosifer', serif;
-    color: #ffbc5c;
-    font-size: 51px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    /* animation: titleMovement 60s linear infinite; */
+.gameTitle {
+  text-align: center;
+  font-family: "Nosifer", serif;
+  color: #ffbc5c;
+  font-size: 51px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  /* animation: titleMovement 60s linear infinite; */
 }
-.gameTitle h1{
-    text-shadow: 4px 7px 3px black;
-    /* animation: titleMovement 10s linear infinite; */
-    transition: font-size 5s, text-shadow 2s;
+.gameTitle h1 {
+  text-shadow: 4px 7px 3px black;
+  /* animation: titleMovement 10s linear infinite; */
+  transition: font-size 5s, text-shadow 2s;
 }
-.gameTitle h1:hover{
-    font-size: 65px;
-    text-shadow: 2px 3px 2px black;
-    color: black;
+.gameTitle h1:hover {
+  font-size: 65px;
+  text-shadow: 2px 3px 2px black;
+  color: black;
 }
 
-.startButton{
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    height: 150px;
-    border-left: 18px solid black;
-    border-right: 18px solid black;
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
-    border-radius: 80px 215px 140px;
-    background-color: #ffbc5c;
-    position: absolute;
-    top: 56%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    transition: transform 2s, font-size 1s, background-color 1s ease-in;
+.startButton {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: 150px;
+  border-left: 18px solid black;
+  border-right: 18px solid black;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  border-radius: 80px 215px 140px;
+  background-color: #ffbc5c;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  transition: transform 2s, font-size 1s, background-color 1s ease-in;
 }
-.startButton h1{
-    font-size: 73px;
-    float: left;
-    margin-left: 73px;
-    margin-top:31px;
-    padding-right:25px;
+.startButton a:link {
+  color: white;
 }
-.startButton img{
-    padding-top: 10px;
-    width: 170px;
-    transition:transform 1s;
-
+.startButton a:visited {
+  color: white;
 }
-.startButton img:hover{
-    transform: scale(1.2);
-
+.startButton h1 {
+  font-size: 73px;
+  float: left;
+  margin-left: 73px;
+  margin-top: 31px;
+  padding-right: 25px;
 }
-.startButton:hover{
-    background-color: black;
-    color: white;
-    box-shadow: 15px 23px 18px #4b4b4b;
-    border-color: white;
-    font-size: 78px;
-    /* transform: rotateX(360); */
+.startButton img {
+  padding-top: 10px;
+  width: 170px;
+  transition: transform 1s;
+}
+.startButton img:hover {
+  transform: scale(1.2);
+}
+.startButton:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 15px 23px 18px #4b4b4b;
+  border-color: white;
+  font-size: 78px;
+  /* transform: rotateX(360); */
 }
 
 @keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 100% 0; }
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
 }
 
+/* Cooking Page CSS */
+
+.mainBackground {
+  background-image: url("./Assets/Wood-Background.png");
+  height: 100vh;
+  width: 100vw;
+}
