@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url("bg.jpg");
+    background-image: url("img/bg.jpg");
     background-repeat: repeat;
     animation: animatedBackground 60s linear infinite;
 }
@@ -15,12 +15,10 @@ body {
     font-size: 51px;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
-    /* animation: titleMovement 60s linear infinite; */
+    width: 70%;
 }
 .gameTitle h1{
     text-shadow: 4px 7px 3px black;
-    /* animation: titleMovement 10s linear infinite; */
     transition: font-size 5s, text-shadow 2s;
 }
 .gameTitle h1:hover{
@@ -45,32 +43,37 @@ body {
     left: 50%;
     transform: translateX(-50%);
     display: block;
-    transition: transform 2s, font-size 1s, background-color 1s ease-in;
+    transition: transform 2s, font-size 1s, background-color 1s ease-in, width 2s;
 }
+
 .startButton h1{
     font-size: 73px;
     float: left;
     margin-left: 73px;
     margin-top:31px;
     padding-right:25px;
+    
 }
+
 .startButton img{
     padding-top: 10px;
     width: 170px;
     transition:transform 1s;
-
 }
+
 .startButton img:hover{
     transform: scale(1.2);
-
+    transition: 2s;
+    animation: spin 6s linear infinite;
 }
+
 .startButton:hover{
     background-color: black;
     color: white;
     box-shadow: 15px 23px 18px #4b4b4b;
     border-color: white;
     font-size: 78px;
-    /* transform: rotateX(360); */
+    cursor: pointer;
 }
 
 @keyframes animatedBackground {
@@ -78,3 +81,105 @@ body {
 	to { background-position: 100% 0; }
 }
 
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(1800deg);
+    }
+}
+
+.projectInfo{
+    border: 5px solid black;
+    width:20%;
+    margin: auto;
+    position: absolute;
+    bottom: 50px;
+    left: 720px;
+    background-color: #ffbc5c;
+    border-radius: 35px;
+    transform: translateY(-50%);
+    transition: transform .95s;
+}
+
+.projectInfo h1{
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.projectInfo:hover{
+    cursor: pointer;
+    transform: scale(1.18);
+    box-shadow: 15px 23px 18px #2a2a2a;
+}
+
+.projectInfo a{
+    text-decoration: none;
+    color: black;
+}
+
+.info{
+    width: 40%;
+    margin:auto;
+    height: 500px;
+    border: 9px solid black;
+    margin-top: 100px;
+    animation: spindiv 2s linear forwards;
+    border-radius: 33px;
+    background-color: #ffbc5c;
+    transition: transform 2s;
+    
+}
+
+.info h3, h2{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.info:hover{
+    /* transform: scaleX(1.2) scaleY(1.2); */
+    box-shadow: 25px 33px 28px rgba(23, 21, 21, 0.486);
+}
+
+.teamMember table{
+    width:80%;
+    margin: auto;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.teamMember table tr {
+    padding: 15px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.teamMember table td{
+    padding: 10px;
+    border: 2px solid black;
+    background-color: ivory;
+    border-radius: 22px;
+    transition: .75s;
+
+}
+.teamMember table td:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 8px 15px black;
+}
+
+ul li{
+    text-decoration: none;
+}
+
+@keyframes spindiv{
+    0%{
+        opacity: 0;
+        transform: rotateZ(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateZ(720deg);
+    }
+}
