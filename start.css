@@ -90,8 +90,17 @@
 
 /* Cooking Page CSS */
 
-.mainBackground {
+.Main-Background {
   background-image: url("./Assets/Wood-Background.png");
+  background-size: cover;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
+}
+
+.Cooking-Title {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 46pt;
+  text-align: center;
 }

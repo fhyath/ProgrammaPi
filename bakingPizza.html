@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nosifer">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="start.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Pizza Bot</title>
+    <style>
+        label {
+            padding: 10px;
+            border: 5px solid #E2B661;
+            background-color: white;
+            border-radius: 10px;
+            font-size: 15pt;
+            font-weight: bold;
+            color: #E2B661;
+            text-align: center;
+        }
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        .Main-Content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .Pizza-Out {
+            transition: transform 2s ease-in;
+            transform: translate(400px);
+            display: flex;
+            height: 400px;
+            width: 400px;
+            border-radius: 100%;
+            background-color: #C7A45F;
+            margin-left: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Pizza-In {
+            height: 325px;
+            width: 325px;
+            border-radius: 100%;
+            background-color: #EADBBF;
+            margin-left: auto;
+            margin-right: auto;
+            align-content: center;
+            transition: transform 2s ease-in;
+        }
+
+        .Button-Container {
+            margin-left: 80%;
+            margin-right: auto;
+            margin-bottom: 50px;
+        }
+
+        .Finished-Pizza-Container {
+            visibility: hidden;
+            transform: translate(0px)
+        }
+
+        .Finished-Pizza {
+            height: 450px;
+            width: 450px;
+        }
+
+        .Brick-Wall-Container {
+            transform: translate(450px)
+        }
+
+        .Brick-Wall {
+            height: 450px;
+            width: 450px;
+        }
+
+        #Baking:checked~.Main-Content>.Pizza-Out {
+            animation: cook-pizza-out 2s ease-in forwards;
+        }
+
+        #Baking:checked~.Main-Content>.Finished-Pizza-Container {
+
+            animation: finished-pizza 3s ease-in forwards;
+        }
+
+        @keyframes cook-pizza-out {
+
+            100% {
+                transform: translate(850px);
+                transition-delay: 1s;
+            }
+        }
+
+        @keyframes finished-pizza {
+            0% {
+                animation-delay: 1s;
+            }
+
+            100% {
+                visibility: visible;
+                transform: translate(-450px);
+                opacity: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Main-Background">
+        <input type="checkbox" id="Baking" />
+        <div class="Cooking-Title">TIME TO BAKE</div>
+        <div class="Button-Container">
+            <label for="Baking">Start Baking</label>
+        </div>
+        <div class="Main-Content">
+            <!-- <div class="Pizza-Paddle-Container">
+                <img src="./Assets/Pizza-Paddle.png" alt="Pizza-Paddle" class="Pizza-Paddle">
+            </div> -->
+            <div class="Pizza-Out">
+                <div class="Pizza-In">
+                </div>
+            </div>
+            <div class="Brick-Wall-Container">
+                <img src="./Assets/Brick-Wall.png" alt="BrickWall" class="Brick-Wall">
+            </div>
+            <div class="Finished-Pizza-Container">
+                <img src="./Assets/Finished-Pizza.png" alt="Finished Pizza" class="Finished-Pizza">
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>
