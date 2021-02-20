@@ -1,0 +1,214 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  width: 100%;
+}
+.text-center {
+  text-align: center;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 200%;
+  color: white;
+  text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1),
+    0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1),
+    0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1),
+    -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1),
+    -0.03em 0 0 rgba(0, 0, 0, 1);
+}
+body {
+  margin: 0;
+  width: 100%;
+  background-image: url("./Assets/Wood-Background.png");
+  background-size: cover;
+  display: block;
+}
+
+.left {
+  float: left;
+  width: 20%;
+  border: 5px solid #e2b661;
+  border-radius: 25px;
+  margin-left: 25px;
+  padding-left: 180px;
+  padding-top: 50px;
+  background-color: white;
+  height: 70%;
+}
+
+.left h3 {
+  /* margin-bottom:20px; */
+  display: inline-block;
+  font-size: 22px;
+  padding-left: 35px;
+  font-weight: bolder;
+  /* padding-top: 25px; */
+}
+input[type="radio"] {
+  display: none;
+}
+/* .leftOption{
+    width: 30%;
+    height:50%;
+    transition: transform 2s;
+}
+.leftOption:hover{
+    transform: scale(1.3);
+} */
+.pizza {
+  width: 100vh;
+  height: 100vh;
+  margin: auto;
+  padding: 5px;
+  /* box-sizing: border-box; */
+  position: absolute;
+  top: 100px;
+  left: 915px;
+  /* float: right; */
+}
+img[src="pizzaDough.png"] {
+  width: 150%;
+  height: 100%;
+  position: absolute;
+  left: -250px;
+}
+
+/* This is on each radio image */
+.ingredient {
+  width: 80px;
+  /* You put the transition on the property you want to hover over 
+    and it will take .8s to scale to '1.3'  */
+  transition: 0.8s;
+  vertical-align: middle;
+  padding-top: 35px;
+}
+.ing1 {
+  width: 100px;
+}
+.ing2 {
+  width: 100px;
+}
+.ing3 {
+  width: 70px;
+}
+.ing4 {
+  width: 65px;
+}
+/* hovering over ant radio image */
+.ingredient:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(30px 10px 4px rgb(50, 50, 50));
+  cursor: pointer;
+}
+.crust {
+  margin: auto;
+  box-sizing: border-box;
+  position: absolute;
+  background: #e6bf70;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 600px;
+  border: 25px solid #e0b152;
+  border-radius: 500px;
+  display: flex;
+  position: absolute;
+  background-image: url("./Assets/pizzaDough.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.sauce {
+  height: 75%;
+  width: 75%;
+  margin: auto;
+  border-radius: inherit;
+  background: #dcca98;
+  position: absolute;
+  top: 70;
+  left: 70;
+}
+#select0:checked ~ div .sauce {
+  background: #dcca98;
+}
+#select1:checked ~ div .sauce {
+  background: #60986c;
+  animation: sauce 15s infinite ease-in-out alternate;
+}
+#select1:checked ~ img .ingredient {
+  transform: translateX(1000px);
+}
+#select2:checked ~ div .sauce {
+  background: red;
+  animation: sauce 15s infinite ease-in-out alternate;
+}
+
+#select3:checked ~ div .sauce {
+  background: #fcf2d8;
+  animation: sauce 15s infinite ease-in-out alternate;
+}
+
+@keyframes sauce {
+  0% {
+    transform: scale(0.2);
+  }
+  20% {
+    transform: scale(0.4);
+  }
+  30% {
+    transform: scale(0.5);
+  }
+  40% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  60% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.addSauce {
+  position: fixed;
+  bottom: 50px;
+  right: 65px;
+  border: 5px solid #e2b661;
+  width: 200px;
+  height: 125px;
+  border-radius: 35px;
+  display: block;
+  background-color: white;
+  transition: transform 0.8s;
+}
+.addSauce h2 {
+  margin-top: 25px;
+  float: left;
+  font-size: 30px;
+  font-weight: 900;
+  color: #e2b661;
+  text-align: center;
+  padding-left: 22px;
+  transition: 1s;
+}
+.addSauce:hover {
+  transform: scale(1.3);
+  box-shadow: 5px 10px 18px black;
+  cursor: pointer;
+}
+.arrow {
+  float: right;
+  /* width: 85px; */
+  margin-top: 10px;
+  font-size: 75px;
+  margin-right: 20px;
+  color: #e2b661;
+}
+h3 {
+  font-family: Papyrus;
+}

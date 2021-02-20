@@ -1,0 +1,104 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Main-Background {
+  background-image: url("./Assets/Wood-Background.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.Cooking-Title {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 46pt;
+  text-align: center;
+}
+
+label {
+  padding: 10px;
+  border: 5px solid #e2b661;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 15pt;
+  font-weight: bold;
+  color: #e2b661;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.Main-Content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Uncooked-Pizza-Container {
+  transform: translate(0px);
+  z-index: 2;
+}
+
+.Uncooked-Pizza {
+  height: 400px;
+  width: 400px;
+}
+
+.Button-Container {
+  margin-left: 80%;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.Finished-Pizza-Container {
+  visibility: hidden;
+  animation-delay: -1s;
+  transform: translate(-450px);
+  z-index: 2;
+}
+
+.Finished-Pizza {
+  animation-delay: 2s;
+  height: 425px;
+  width: 425px;
+}
+
+.Brick-Wall-Container {
+  transform: translate(0px);
+  z-index: 3;
+}
+
+.Brick-Wall {
+  height: 450px;
+  width: 450px;
+}
+
+#Baking:checked ~ .Main-Content > .Uncooked-Pizza-Container {
+  animation: uncooked-pizza 2s ease-in forwards;
+}
+
+#Baking:checked ~ .Main-Content > .Finished-Pizza-Container {
+  animation: finished-pizza 3s ease-in forwards;
+}
+
+@keyframes uncooked-pizza {
+  100% {
+    transform: translate(450px);
+    transition-delay: 1s;
+  }
+}
+
+@keyframes finished-pizza {
+  100% {
+    visibility: visible;
+    transform: translate(0px);
+  }
+}
