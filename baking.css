@@ -94,7 +94,7 @@ input[type="checkbox"] {
     transform: translate(450px);
     transition-delay: 1s;
   }
-}
+} 
 
 @keyframes finished-pizza {
   100% {
